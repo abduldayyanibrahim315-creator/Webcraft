@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WebCraft NG — We Build. You Grow.</title>
+
+  <meta name="description" content="WebCraft NG builds modern, responsive and professional websites for businesses, brands and individuals.">
+
+  <meta name="keywords" content="WebCraft NG, website design Nigeria, website development Abuja, Nigerian web designer, business websites">
+
+  <meta property="og:title" content="WebCraft NG — We Build. You Grow.">
+  <meta property="og:description" content="Modern websites for businesses, brands and individuals.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #05070b;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 100px 7%;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 18px 7%;
+
+      background: rgba(5, 7, 11, 0.88);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid rgba(0, 170, 255, 0.12);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #00aaff;
+    }
+
+    .logo span {
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: #00aaff;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      color: #00aaff;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 130px 7% 80px;
+
+      background:
+        radial-gradient(
+          circle at 50% 25%,
+          rgba(0, 136, 255, .2),
+          transparent 40%
+        ),
+        #05070b;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero small {
+      color: #00aaff;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 1;
+      margin: 20px 0;
+    }
+
+    .hero h1 span {
+      color: #00aaff;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: auto;
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 35px;
+
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 9px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: #00aaff;
+      color: #00111c;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0,170,255,.3);
+    }
+
+    .btn-outline {
+      border: 1px solid #00aaff;
+      color: #00aaff;
+    }
+
+    .btn-outline:hover {
+      background: #00aaff;
+      color: #00111c;
+    }
+
+    /* ================= SECTION TITLE ================= */
+
+    .section-title {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      color: #00aaff;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      margin: 10px 0;
+    }
+
+    .section-title p {
+      color: #999;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-container {
+      max-width: 1050px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .about-text h2 span {
+      color: #00aaff;
+    }
+
+    .about-text p {
+      color: #999;
+      margin-bottom: 18px;
+    }
+
+    .about-box {
+      padding: 35px;
+      border-radius: 20px;
+      background: #0a0e15;
+      border: 1px solid #172231;
+    }
+
+    .about-box h3 {
+      color: #00aaff;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: #aaa;
+    }
+
+    /* ================= TRUST ================= */
+
+    .trust {
+      background: #080b11;
+    }
+
+    .trust-grid {
+      max-width: 1100px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .trust-card {
+      text-align: center;
+      padding: 30px 20px;
+
+      border-radius: 16px;
+
+      background: #0d121a;
+      border: 1px solid #172231;
+
+      transition: .3s;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-5px);
+      border-color: #00aaff;
+    }
+
+    .trust-card .icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .trust-card h3 {
+      font-size: 17px;
+    }
+
+    .trust-card p {
+      color: #888;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 30px;
+
+      border-radius: 18px;
+
+      background: #0a0e15;
+      border: 1px solid #151d29;
+
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #00aaff;
+      box-shadow: 0 15px 40px rgba(0,170,255,.08);
+    }
+
+    .service-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #999;
+    }
+
+    /* ================= HOW IT WORKS ================= */
+
+    .process {
+      background: #080b11;
+    }
+
+    .process-grid {
+      max-width: 1050px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      text-align: center;
+      padding: 30px 20px;
+
+      background: #0d121a;
+      border-radius: 18px;
+      border: 1px solid #172231;
+
+      position: relative;
+    }
+
+    .process-number {
+      width: 45px;
+      height: 45px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: 0 auto 15px;
+
+      border-radius: 50%;
+
+      background: #00aaff;
+      color: #00111c;
+
+      font-weight: bold;
+    }
+
+    .process-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project {
+      overflow: hidden;
+
+      border-radius: 18px;
+
+      background: #0a0e15;
+      border: 1px solid #151d29;
+    }
+
+    .project img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+
+      display: block;
+
+      transition: .5s;
+    }
+
+    .project:hover img {
+      transform: scale(1.06);
+    }
+
+    .project-info {
+      padding: 22px;
+    }
+
+    .project-info span {
+      color: #00aaff;
+      font-size: 13px;
+    }
+
+    .project-info h3 {
+      margin-top: 5px;
+    }
+
+    /* ================= WEBSITE TYPES ================= */
+
+    .website-types {
+      background: #080b11;
+    }
+
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .type-card {
+      padding: 25px;
+
+      border-radius: 15px;
+
+      background: #0d121a;
+      border: 1px solid #151d29;
+
+      transition: .3s;
+    }
+
+    .type-card:hover {
+      border-color: #00aaff;
+      transform: translateY(-5px);
+    }
+
+    .type-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .type-card p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* ================= DELIVERY ================= */
+
+    .delivery-grid {
+      max-width: 900px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .delivery-card {
+      text-align: center;
+      padding: 30px;
+
+      border-radius: 18px;
+
+      background: #0a0e15;
+      border: 1px solid #172231;
+    }
+
+    .delivery-card h3 {
+      color: #00aaff;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .delivery-card p {
+      color: #888;
+      font-size: 14px;
+    }
+
+    /* ================= PRICING ================= */
+
+    .pricing-grid {
+      max-width: 1100px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .price-card {
+      position: relative;
+
+      padding: 35px 30px;
+
+      border-radius: 20px;
+
+      background: #0a0e15;
+      border: 1px solid #18212e;
+
+      transition: .3s;
+    }
+
+    .price-card:hover {
+      transform: translateY(-8px);
+      border-color: #00aaff;
+    }
+
+    .price-card.featured {
+      border-color: #00aaff;
+      box-shadow: 0 0 35px rgba(0,170,255,.1);
+    }
+
+    .price-card h3 {
+      font-size: 24px;
+      margin-top: 12px;
+    }
+
+    .price {
+      font-size: 42px;
+      font-weight: 800;
+      color: #00aaff;
+      margin: 15px 0;
+    }
+
+    .price-card > p {
+      color: #888;
+      min-height: 50px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin: 25px 0;
+    }
+
+    .price-card li {
+      margin: 12px 0;
+      color: #ccc;
+    }
+
+    .price-btn {
+      display: block;
+      text-align: center;
+
+      padding: 13px;
+
+      border-radius: 8px;
+
+      background: #00aaff;
+      color: #00111c;
+
+      font-weight: bold;
+    }
+
+    .negotiable {
+      display: inline-block;
+
+      padding: 5px 10px;
+
+      border-radius: 20px;
+
+      border: 1px solid #00aaff;
+
+      color: #00aaff;
+
+      font-size: 10px;
+      font-weight: bold;
+
+      letter-spacing: 1px;
+
+      background: rgba(0,170,255,.07);
+    }
+
+    .popular {
+      position: absolute;
+
+      top: -13px;
+      right: 20px;
+
+      padding: 5px 12px;
+
+      border-radius: 20px;
+
+      background: #00aaff;
+      color: #00111c;
+
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .pricing-note {
+      max-width: 650px;
+      margin: 35px auto 0;
+
+      text-align: center;
+
+      padding: 20px;
+
+      border-radius: 15px;
+
+      background: rgba(0,170,255,.04);
+
+      border: 1px solid rgba(0,170,255,.2);
+
+      color: #999;
+    }
+
+    .pricing-note strong {
+      color: #fff;
+    }
+
+    /* ================= HOSTING ================= */
+
+    .hosting {
+      background: #080b11;
+    }
+
+    .hosting-container {
+      max-width: 900px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .hosting-card {
+      padding: 30px;
+
+      border-radius: 18px;
+
+      background: #0d121a;
+
+      border: 1px solid #172231;
+    }
+
+    .hosting-card h3 {
+      margin-bottom: 10px;
+      color: #00aaff;
+    }
+
+    .hosting-card p {
+      color: #999;
+    }
+
+    /* ================= FAQ ================= */
+
+    .faq-container {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      margin-bottom: 12px;
+
+      border-radius: 12px;
+
+      background: #0a0e15;
+      border: 1px solid #172231;
+
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+
+      padding: 20px;
+
+      display: flex;
+      justify-content: space-between;
+
+      background: none;
+      border: none;
+
+      color: #fff;
+
+      text-align: left;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+
+      padding: 0 20px 20px;
+
+      color: #999;
+      font-size: 14px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* ================= CUSTOM QUOTE ================= */
+
+    .custom-quote {
+      text-align: center;
+
+      padding: 90px 7%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(0,136,255,.15),
+          transparent 55%
+        ),
+        #05070b;
+    }
+
+    .custom-quote h2 {
+      font-size: clamp(35px,6vw,60px);
+      margin-bottom: 15px;
+    }
+
+    .custom-quote p {
+      color: #999;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-container {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+
+      padding: 16px;
+
+      border-radius: 10px;
+
+      border: 1px solid #1b2634;
+
+      outline: none;
+
+      background: #0a0e15;
+
+      color: white;
+
+      font-size: 15px;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+      border-color: #00aaff;
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      border: none;
+
+      cursor: pointer;
+
+      padding: 15px;
+
+      border-radius: 10px;
+
+      background: #00aaff;
+      color: #00111c;
+
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .success-message {
+      display: none;
+
+      margin-top: 20px;
+
+      padding: 15px;
+
+      border-radius: 10px;
+
+      background: rgba(0,170,255,.08);
+
+      border: 1px solid #00aaff;
+
+      color: #00aaff;
+
+      text-align: center;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      text-align: center;
+
+      padding: 35px 7%;
+
+      border-top: 1px solid #151d29;
+
+      color: #777;
+    }
+
+    footer strong {
+      color: #00aaff;
+    }
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 20px;
+      bottom: 20px;
+
+      width: 58px;
+      height: 58px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+
+      background: #25D366;
+      color: white;
+
+      font-size: 28px;
+
+      z-index: 900;
+
+      box-shadow: 0 10px 30px rgba(37,211,102,.3);
+    }
+
+    /* ================= POPUP ================= */
+
+    .popup {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 2000;
+
+      background: rgba(0,0,0,.86);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      backdrop-filter: blur(10px);
+    }
+
+    .popup-box {
+      width: min(90%,450px);
+
+      text-align: center;
+
+      padding: 45px 30px;
+
+      border-radius: 25px;
+
+      background: #0a0e15;
+
+      border: 1px solid #00aaff;
+
+      box-shadow: 0 0 70px rgba(0,170,255,.15);
+
+      animation: popupIn .6s ease;
+    }
+
+    .popup-box h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .popup-box p {
+      color: #999;
+      margin-bottom: 25px;
+    }
+
+    .popup-btn {
+      border: none;
+
+      cursor: pointer;
+
+      padding: 14px 25px;
+
+      border-radius: 10px;
+
+      background: #00aaff;
+
+      color: #00111c;
+
+      font-weight: bold;
+
+      font-size: 15px;
+    }
+
+    @keyframes popupIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 850px) {
+
+      .services-grid,
+      .projects-grid,
+      .pricing-grid,
+      .types-grid,
+      .trust-grid,
+      .process-grid,
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-container,
+      .hosting-container {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px;
+
+        background: #070a0f;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav>
+
+    <a href="#" class="logo">
+      WebCraft<span> NG</span>
+    </a>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <small>WEB DESIGN & DEVELOPMENT</small>
+
+      <h1>
+        We Build.<br>
+        <span>You Grow.</span>
+      </h1>
+
+      <p>
+        Modern, fast and professional websites designed
+        to help businesses, brands and individuals stand
+        out online.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact" class="btn btn-primary">
+          Build My Website 🚀
+        </a>
+
+        <a href="#projects" class="btn btn-outline">
+          View Our Work
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+    <div class="about-container">
+
+      <div class="about-text">
+
+        <span style="color:#00aaff;font-weight:bold;letter-spacing:3px;">
+          ABOUT WEBCRAFT NG
+        </span>
+
+        <h2>
+          Your Idea.<br>
+          <span>Our Craft.</span>
+        </h2>
+
+        <p>
+          WebCraft NG is a modern web design and development
+          service focused on creating websites that look
+          professional, work smoothly and help businesses
+          build their online presence.
+        </p>
+
+        <p>
+          Whether you need a simple business website,
+          online store, portfolio or a completely custom
+          platform, we can build it around your idea.
+        </p>
+
+      </div>
+
+      <div class="about-box">
+
+        <h3>Why WebCraft NG?</h3>
+
+        <p>
+          We focus on clean design, mobile responsiveness,
+          smooth user experience and practical features
+          that make your website useful — not just beautiful.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= TRUST ================= -->
+
+  <section class="trust">
+
+    <div class="section-title">
+
+      <span>WHY CHOOSE US</span>
+
+      <h2>Built With Purpose</h2>
+
+      <p>
+        We care about how your website looks,
+        feels and works.
+      </p>
+
+    </div>
+
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <div class="icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>Looks great on phones, tablets and computers.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">🎨</div>
+        <h3>Modern Design</h3>
+        <p>Clean and attractive designs built around your brand.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">⚡</div>
+        <h3>Fast Experience</h3>
+        <p>Focused on smooth navigation and performance.</p>
+      </div>
+
+      <div class="trust-card">
+        <div class="icon">💬</div>
+        <h3>WhatsApp Support</h3>
+        <p>Easy communication throughout your project.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SERVICES ================= -->
+
+  <section id="services">
+
+    <div class="section-title">
+
+      <span>WHAT WE DO</span>
+
+      <h2>Our Services</h2>
+
+      <p>
+        Everything you need to build a strong online presence.
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Business Websites</h3>
+        <p>
+          Professional websites that make your business
+          look credible online.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛒</div>
+        <h3>Online Stores</h3>
+        <p>
+          Sell products online with modern e-commerce
+          websites.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Mobile Websites</h3>
+        <p>
+          Websites designed to look great on phones,
+          tablets and computers.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>Landing Pages</h3>
+        <p>
+          High-converting pages for products,
+          services and campaigns.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">👤</div>
+        <h3>Portfolio Websites</h3>
+        <p>
+          Showcase your skills, projects and achievements
+          professionally.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Website Redesign</h3>
+        <p>
+          Turn an outdated website into a modern
+          experience.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= HOW IT WORKS ================= -->
+
+  <section class="process">
+
+    <div class="section-title">
+
+      <span>OUR PROCESS</span>
+
+      <h2>How It Works</h2>
+
+      <p>
+        Getting your website online is simple.
+      </p>
+
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+
+        <div class="process-number">1</div>
+
+        <h3>Tell Us</h3>
+
+        <p>
+          Tell us about your business and the website
+          you want.
+        </p>
+
+      </div>
+
+      <div class="process-card">
+
+        <div class="process-number">2</div>
+
+        <h3>We Design</h3>
+
+        <p>
+          We create the design and build the website
+          around your requirements.
+        </p>
+
+      </div>
+
+      <div class="process-card">
+
+        <div class="process-number">3</div>
+
+        <h3>You Review</h3>
+
+        <p>
+          You check the website and request any needed
+          changes.
+        </p>
+
+      </div>
+
+      <div class="process-card">
+
+        <div class="process-number">4</div>
+
+        <h3>We Launch</h3>
+
+        <p>
+          Once everything is ready, your website goes live.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects">
+
+    <div class="section-title">
+
+      <span>FEATURED WORK</span>
+
+      <h2>What We Can Build</h2>
+
+      <p>
+        Examples of websites WebCraft NG can create.
+      </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+          alt="Restaurant website">
+
+        <div class="project-info">
+
+          <span>RESTAURANT</span>
+
+          <h3>Food & Restaurant Website</h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85"
+          alt="Fashion website">
+
+        <div class="project-info">
+
+          <span>FASHION</span>
+
+          <h3>Fashion Brand Website</h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="project">
+
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+          alt="Real estate website">
+
+        <div class="project-info">
+
+          <span>REAL ESTATE</span>
+
+          <h3>Real Estate Website</h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= WEBSITE TYPES ================= -->
+
+  <section class="website-types">
+
+    <div class="section-title">
+
+      <span>YOUR IDEA, OUR BUILD</span>
+
+      <h2>Whatever Your Business, We Can Build It.</h2>
+
+      <p>
+        From simple websites to complete online platforms,
+        we can create a website around your idea.
+      </p>
+
+    </div>
+
+    <div class="types-grid">
+
+      <div class="type-card">
+        <h3>🏨 Hotel Websites</h3>
+        <p>Show rooms, services, location and booking information.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>🎓 School Websites</h3>
+        <p>Professional websites for schools and educational institutions.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>💇 Salon Websites</h3>
+        <p>Show services, prices, gallery and contact information.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>🚚 Logistics Websites</h3>
+        <p>Websites for delivery, transportation and logistics businesses.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>🎉 Event Websites</h3>
+        <p>Promote events, tickets, schedules and important information.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>⭐ Personal Brands</h3>
+        <p>Build a strong online identity around your personal brand.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>💪 Fitness Websites</h3>
+        <p>Websites for gyms, trainers and fitness brands.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>🏥 Clinic Websites</h3>
+        <p>Professional websites for clinics and healthcare businesses.</p>
+      </div>
+
+      <div class="type-card">
+        <h3>🛍️ E-Commerce Stores</h3>
+        <p>Sell products online with a clean and modern store.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= DELIVERY ================= -->
+
+  <section>
+
+    <div class="section-title">
+
+      <span>DELIVERY</span>
+
+      <h2>How Fast Can We Build It?</h2>
+
+      <p>
+        Delivery time depends on the size and features
+        of your website.
+      </p>
+
+    </div>
+
+    <div class="delivery-grid">
+
+      <div class="delivery-card">
+        <h3>1–3 Days</h3>
+        <p>
+          Simple landing pages and basic websites.
+        </p>
+      </div>
+
+      <div class="delivery-card">
+        <h3>3–7 Days</h3>
+        <p>
+          Business websites and multi-page projects.
+        </p>
+      </div>
+
+      <div class="delivery-card">
+        <h3>7+ Days</h3>
+        <p>
+          Advanced stores and custom websites.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PRICING ================= -->
+
+  <section id="pricing">
+
+    <div class="section-title">
+
+      <span>PRICING</span>
+
+      <h2>Simple & Affordable</h2>
+
+      <p>
+        Choose a package that fits your business.
+        Custom requirements can be discussed.
+      </p>
+
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="price-card">
+
+        <div class="negotiable">
+          NEGOTIABLE
+        </div>
+
+        <h3>Starter</h3>
+
+        <div class="price">
+          ₦50,000
+        </div>
+
+        <p>
+          Perfect for individuals and small businesses.
+        </p>
+
+        <ul>
+          <li>✓ Professional website</li>
+          <li>✓ Mobile responsive</li>
+          <li>✓ Contact / WhatsApp button</li>
+          <li>✓ Basic animations</li>
+        </ul>
+
+        <a href="#contact" class="price-btn">
+          Get Started
+        </a>
+
+      </div>
+
+
+      <div class="price-card featured">
+
+        <div class="popular">
+          MOST POPULAR
+        </div>
+
+        <div class="negotiable">
+          NEGOTIABLE
+        </div>
+
+        <h3>Business</h3>
+
+        <div class="price">
+          ₦80,000
+        </div>
+
+        <p>
+          For businesses that want a stronger online presence.
+        </p>
+
+        <ul>
+          <li>✓ Everything in Starter</li>
+          <li>✓ Premium UI/UX design</li>
+          <li>✓ Multiple pages</li>
+          <li>✓ Animations & effects</li>
+          <li>✓ WhatsApp integration</li>
+        </ul>
+
+        <a href="#contact" class="price-btn">
+          Choose Business
+        </a>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <div class="negotiable">
+          NEGOTIABLE
+        </div>
+
+        <h3>Premium</h3>
+
+        <div class="price">
+          ₦150,000
+        </div>
+
+        <p>
+          For advanced websites and growing brands.
+        </p>
+
+        <ul>
+          <li>✓ Everything in Business</li>
+          <li>✓ Advanced features</li>
+          <li>✓ Online store options</li>
+          <li>✓ Custom functionality</li>
+          <li>✓ Priority support</li>
+        </ul>
+
+        <a href="#contact" class="price-btn">
+          Let's Discuss
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="pricing-note">
+
+      💬 <strong>Need something different?</strong><br>
+
+      All prices are negotiable depending on your
+      requirements.
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= HOSTING ================= -->
+
+  <section class="hosting">
+
+    <div class="section-title">
+
+      <span>GOING LIVE</span>
+
+      <h2>Domain & Hosting</h2>
+
+      <p>
+        Need help getting your website online?
+        We've got you covered.
+      </p>
+
+    </div>
+
+    <div class="hosting-container">
+
+      <div class="hosting-card">
+
+        <h3>🌐 Domain</h3>
+
+        <p>
+          We can help you choose and set up a professional
+          domain name for your business.
+        </p>
+
+      </div>
+
+      <div class="hosting-card">
+
+        <h3>☁️ Hosting</h3>
+
+        <p>
+          We can help you get your website hosted and
+          accessible online.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FAQ ================= -->
+
+  <section id="faq">
+
+    <div class="section-title">
+
+      <span>FAQ</span>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <p>
+        Everything you may want to know before getting started.
+      </p>
+
+    </div>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          How much does a website cost?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Our packages start from ₦50,000, but prices are
+          negotiable depending on your requirements.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Can I request a custom website?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Yes. Tell us what you want and we can discuss
+          a custom package and price.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Will my website work on phones?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Yes. Our websites are designed to be responsive
+          across phones, tablets and computers.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          Do you provide domain and hosting?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          We can help you arrange domain and hosting.
+          These may be separate costs depending on the
+          service required.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          How long does a website take?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Simple websites can take around 1–3 days,
+          while larger projects may take a week or longer.
+        </div>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <button class="faq-question">
+          How do I contact WebCraft NG?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          You can contact us directly through WhatsApp
+          using the green WhatsApp button on the website.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CUSTOM QUOTE ================= -->
+
+  <section class="custom-quote">
+
+    <h2>Have a Different Idea?</h2>
+
+    <p>
+      Don't see exactly what you need?
+      Tell us your idea and we'll discuss a custom
+      solution and price.
+    </p>
+
+    <a href="#contact" class="btn btn-primary">
+      Get a Custom Quote 🚀
+    </a>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+    <div class="section-title">
+
+      <span>GET STARTED</span>
+
+      <h2>Let's Build Your Website</h2>
+
+      <p>
+        Fill in the form and we'll contact you on WhatsApp.
+      </p>
+
+    </div>
+
+    <div class="contact-container">
+
+      <form
+        class="contact-form"
+        onsubmit="sendWhatsApp(event)"
+      >
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          required
+        >
+
+        <input
+          type="text"
+          id="business"
+          placeholder="Business / Brand Name"
+          required
+        >
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Your Phone Number"
+          required
+        >
+
+        <select id="package" required>
+
+          <option value="">
+            Choose a Package
+          </option>
+
+          <option>
+            Starter — ₦50,000 (Negotiable)
+          </option>
+
+          <option>
+            Business — ₦80,000 (Negotiable)
+          </option>
+
+          <option>
+            Premium — ₦150,000 (Negotiable)
+          </option>
+
+          <option>
+            Custom Website
+          </option>
+
+        </select>
+
+        <textarea
+          id="message"
+          placeholder="Tell us about the website you want..."
+          required
+        ></textarea>
+
+        <button
+          class="submit-btn"
+          type="submit"
+        >
+          Send Request on WhatsApp 🚀
+        </button>
+
+      </form>
+
+      <div
+        class="success-message"
+        id="successMessage"
+      >
+        Opening WhatsApp... 🚀
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <p>
+      © 2026 <strong>WebCraft NG</strong>.
+      We Build. You Grow.
+    </p>
+
+  </footer>
+
+
+  <!-- ================= WHATSAPP ================= -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/2349068156944"
+    target="_blank"
+    aria-label="Chat on WhatsApp"
+  >
+    💬
+  </a>
+
+
+  <!-- ================= WELCOME POPUP ================= -->
+
+  <div
+    class="popup"
+    id="popup"
+  >
+
+    <div class="popup-box">
+
+      <h2>
+        WebCraft NG 🚀
+      </h2>
+
+      <p>
+        Modern websites for businesses,
+        brands and individuals.
+      </p>
+
+      <button
+        class="popup-btn"
+        onclick="enterWebsite()"
+      >
+        Tap to Enter
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+      document
+        .getElementById("navLinks")
+        .classList.toggle("active");
+
+    }
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          document
+            .getElementById("navLinks")
+            .classList.remove("active");
+
+        });
+
+      });
+
+
+    /* POPUP SOUND */
+
+    function playSound() {
+
+      const AudioContext =
+        window.AudioContext ||
+        window.webkitAudioContext;
+
+      if (!AudioContext) return;
+
+      const audioContext =
+        new AudioContext();
+
+      const oscillator =
+        audioContext.createOscillator();
+
+      const gain =
+        audioContext.createGain();
+
+      oscillator.type = "sine";
+
+      oscillator.frequency.setValueAtTime(
+        500,
+        audioContext.currentTime
+      );
+
+      oscillator.frequency.exponentialRampToValueAtTime(
+        900,
+        audioContext.currentTime + .15
+      );
+
+      gain.gain.setValueAtTime(
+        .0001,
+        audioContext.currentTime
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        .12,
+        audioContext.currentTime + .02
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        .0001,
+        audioContext.currentTime + .25
+      );
+
+      oscillator.connect(gain);
+
+      gain.connect(
+        audioContext.destination
+      );
+
+      oscillator.start();
+
+      oscillator.stop(
+        audioContext.currentTime + .25
+      );
+
+    }
+
+
+    /* ENTER WEBSITE */
+
+    function enterWebsite() {
+
+      playSound();
+
+      const popup =
+        document.getElementById("popup");
+
+      popup.style.opacity = "0";
+
+      popup.style.transition = ".4s";
+
+      setTimeout(() => {
+
+        popup.style.display = "none";
+
+      }, 400);
+
+    }
+
+
+    /* FAQ */
+
+    document
+      .querySelectorAll(".faq-question")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const item =
+            button.parentElement;
+
+          item.classList.toggle("active");
+
+          const symbol =
+            button.querySelector("span");
+
+          symbol.textContent =
+            item.classList.contains("active")
+            ? "−"
+            : "+";
+
+        });
+
+      });
+
+
+    /* WHATSAPP FORM */
+
+    function sendWhatsApp(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      const business =
+        document.getElementById("business").value;
+
+      const phone =
+        document.getElementById("phone").value;
+
+      const packageChoice =
+        document.getElementById("package").value;
+
+      const message =
+        document.getElementById("message").value;
+
+      const success =
+        document.getElementById("successMessage");
+
+      success.style.display = "block";
+
+      const text =
+        `Hello WebCraft NG 👋%0A%0A` +
+        `I want to build a website.%0A%0A` +
+        `Name: ${name}%0A` +
+        `Business: ${business}%0A` +
+        `Phone: ${phone}%0A` +
+        `Package: ${packageChoice}%0A%0A` +
+        `Website Details:%0A${message}`;
+
+      setTimeout(() => {
+
+        window.open(
+          `https://wa.me/2349068156944?text=${text}`,
+          "_blank"
+        );
+
+      }, 500);
+
+    }
+
+  </script>
+
+</body>
+</html>
